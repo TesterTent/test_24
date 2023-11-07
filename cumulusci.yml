@@ -1,0 +1,25 @@
+minimum_cumulusci_version: '3.81.0'
+project:
+    name: test_24
+    package:
+        name: test_24
+        api_version: '55.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/test_24/tests
+            options:
+                outputdir: robot/test_24/results
+
+    robot_testdoc:
+        options:
+            path: robot/test_24/tests
+            output: robot/test_24/doc/test_24_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
